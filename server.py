@@ -17,6 +17,22 @@ docs = {
 def hello(name: str) -> str:
     return f"Hello, {name}!"
 
+@mcp.tool()
+def get_employees() -> list[dict]:
+    """Return a list of employees."""
+    return [
+        {
+            "emp_id": "E001",
+            "name": "John",
+            "department": "Engineering"
+        },
+        {
+            "emp_id": "E002",
+            "name": "Alice",
+            "department": "Finance"
+        }
+    ]
+
 
 if __name__ == "__main__":
     mcp.run()
